@@ -34,6 +34,13 @@ resource "aws_security_group" "demo" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+ingress {
+    from_port   = 81
+    to_port     = 81
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
   ingress {
     from_port   = 443
     to_port     = 443
